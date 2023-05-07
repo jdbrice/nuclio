@@ -8,5 +8,5 @@ services:
     restart: unless-stopped
     ports:
        - 8070:8070 # web ui
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+    # volumes:
+      # - /var/run/docker.sock:/var/run/docker.sock
