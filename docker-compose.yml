@@ -4,10 +4,11 @@ services:
   nuclio:
     container_name: nuclio
     hostname: nuclio
-    image: quay.io/nuclio/dashboard:stable-amd64
+    image: quay.io/nuclio/dashboard
     restart: unless-stopped
     ports:
        - 8070:8070 # web ui
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /tmp:/tmp
+    tmpfs:  
+      - /tmp
